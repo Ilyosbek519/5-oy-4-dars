@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUGOO Электросамокаты</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .notify {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #715BFF;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+  }
+
+  .notify.show {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+<body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="./img/Kugoo.png" alt="">
+          </div>
+    
+          <div class="header-right">
+            <div class="search-bar">
+              <input type="text" placeholder="Search articles..." />
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+    
+            <button class="iconsh">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+    
+            <button class="icon-button notification iconsh">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <span class="notification-badge">3</span>
+            </button>
+           <a class="iconsh" href="./2sector/karzin.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <i class="fa-solid fa-heart iconsh"></i>
+              </svg>
+          </div>
+        </div>
+      </div>
+        
+
+    </header>
+    
+
+  <section class="hero">
+    <img class="imgg" src="./img/ass.png" alt="">
+    <h1>ЭЛЕКТРОСАМОКАТЫ KUGOO KIRIN ОТ ОФИЦИАЛЬНОГО ДИЛЕРА</h1>
+    <p>С бесплатной доставкой по РФ от 1 дня</p>
+    <a href="#" class="btn-primary">Перейти в каталог</a>
+  </section>
+
+  <section class="info-boxes">
+    <div class="info-box">ГАРАНТИЯ 1 ГОД</div>
+    <div class="info-box">РАССРОЧКА от 6 месяцев</div>
+    <div class="info-box">ПОДАРКИ к покупке</div>
+  </section>
+
+  <section class="products">
+    <h2>ЭЛЕКТРОСАМОКАТЫ</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M4</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">29 900 ₽</p>
+        <button onclick="showNotify(1)">Купить в 1 клик</button>
+      </div>
+      <div id="notify" class="notify">
+        ✅ Amal muvaffaqiyatli bajarildi!
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M4</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">29 900 ₽</p>
+        <button onclick="showNotify(2)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M2</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">34 900 ₽</p>
+        <button onclick="showNotify(3)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M6</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge"> до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">23 900 ₽</p>
+        <button onclick="showNotify(4)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M8</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">49 900 ₽</p>
+        <button onclick="showNotify(5)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M4 E90</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">99 900 ₽</p>
+        <button onclick="showNotify(6)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M4</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">29 900 ₽</p>
+        <button onclick="showNotify(7)">Купить в 1 клик</button>
+      </div>
+      <div class="product-card" data-id="1">
+        <img src="./img/6V7A6493 1.png" alt="Kugoo Kirin M4">
+        <h3>Kugoo Kirin M4</h3>
+        <ul>
+            <div class="sett">
+                <i class="fa-solid fa-hard-drive">200 MBT</i>
+                <i class="fa-solid fa-bolt">12 А.ч</i>
+            </div>
+          <div class="sett">
+            <i class="fa-solid fa-gauge">до 60 км</i>
+            <i class="fa-solid fa-stopwatch"> до 55 км/ч</i>
+          </div>
+        </ul> 
+        <p class="price">29 900 ₽</p>
+        <button onclick="showNotify(8)">Купить в 1 клик</button>
+    </div>
+    </div>
+  </section>
+  <script>
+    function showNotify(id) {
+      const notify = document.getElementById("notify");
+      notify.textContent = `🛒 Mahsulot ID: ${id}`;
+      notify.classList.add("show");
+      setTimeout(() => {
+        notify.classList.remove("show");
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
