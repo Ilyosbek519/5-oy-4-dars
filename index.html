@@ -74,7 +74,6 @@
     
 
   <section class="hero">
-    <img class="imgg" src="./img/ass.png" alt="">
     <h1>ЭЛЕКТРОСАМОКАТЫ KUGOO KIRIN ОТ ОФИЦИАЛЬНОГО ДИЛЕРА</h1>
     <p>С бесплатной доставкой по РФ от 1 дня</p>
     <a href="#" class="btn-primary">Перейти в каталог</a>
@@ -222,6 +221,67 @@
     </div>
     </div>
   </section>
+  <section class="add-product-form" style="padding: 40px; background: #9296F9; margin-top: 40px;">
+    <h2 style="margin-bottom: 16px;">Yangi mahsulot qo‘shish</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+      <input id="p-title" placeholder="Title" class="inp" />
+      <input id="p-price" placeholder="Price" class="inp" type="number" />
+      <input id="p-battery" placeholder="Battery" class="inp" />
+      <input id="p-speed" placeholder="Speed" class="inp" />
+      <input id="p-power" placeholder="Power" class="inp" />
+      <input id="p-charging" placeholder="Charging Time" class="inp" />
+    </div>
+    <button class="btn-primary" onclick="addCustomProduct()" >Mahsulotni qo‘shish</button>
+  </section>
+  
+  <style>
+    .inp {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      flex: 1 1 200px;
+    }
+  </style>
+  
+  <script>
+    function addCustomProduct() {
+      const title = document.getElementById('p-title').value.trim();
+      const price = document.getElementById('p-price').value.trim();
+      const battery = document.getElementById('p-battery').value.trim();
+      const speed = document.getElementById('p-speed').value.trim();
+      const power = document.getElementById('p-power').value.trim();
+      const charging = document.getElementById('p-charging').value.trim();
+  
+      if (!title || !price) {
+        alert("Title va price majburiy");
+        return;
+      }
+  
+      const grid = document.querySelector('.product-grid');
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img src="./img/6V7A6493 1.png" alt="${title}">
+        <h3>${title}</h3>
+        <ul>
+          <div class="sett">
+              <i class="fa-solid fa-hard-drive">${battery || "—"}</i>
+              <i class="fa-solid fa-bolt">${power || "—"}</i>
+          </div>
+          <div class="sett">
+              <i class="fa-solid fa-gauge">${speed || "—"}</i>
+              <i class="fa-solid fa-stopwatch">${charging || "—"}</i>
+          </div>
+        </ul> 
+        <p class="price">${price} ₽</p>
+        <button onclick="showNotify('custom')">Купить в 1 клик</button>
+      `;
+      grid.appendChild(card);
+      showNotify('Yangi mahsulot qo‘shildi!');
+      document.querySelectorAll('.inp').forEach(inp => inp.value = '');
+    }
+  </script>
+  
   <script>
     function showNotify(id) {
       const notify = document.getElementById("notify");

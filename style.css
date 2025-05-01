@@ -240,7 +240,17 @@ header nav a {
   font-size: 14px;
   color: #555;
 }
-
+.btn-primary{
+  display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #715bff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
 .product-card .price {
   margin: 10px 0;
   font-size: 20px;
@@ -265,6 +275,9 @@ header nav a {
   left: 876px;
   top: 340px;
 }
+
+
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
